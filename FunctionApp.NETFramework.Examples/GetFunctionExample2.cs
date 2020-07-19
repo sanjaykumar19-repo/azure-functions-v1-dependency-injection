@@ -4,8 +4,10 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Threading.Tasks;
 
 namespace AzureFunctionsV1.DependencyInjection.NETFramework.Examples
@@ -25,7 +27,8 @@ namespace AzureFunctionsV1.DependencyInjection.NETFramework.Examples
             log.LogInformation("C# HTTP trigger function processed a request.");
             var greeterServices = serviceProvider.GetService<IDummyServices>();
             var resp = await greeterServices.GetResponse();
-            return req.CreateResponse(resp.StatusCode, await resp.Content?.ReadAsStringAsync());
+            var data = JsonConvert.DeserializeObject<object>(await resp.Content?.ReadAsStringAsync());
+            return req.CreateResponse(resp.StatusCode, data, mediaType: "application/json");
         }
     }
 }
