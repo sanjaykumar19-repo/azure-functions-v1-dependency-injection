@@ -8,7 +8,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace AzureFunctionsV1.DependencyInjection.NETFramework.Examples
+namespace AzureFunctionsV1.DependencyInjection.Examples
 {
     public static class GetFunctionExample1
     {

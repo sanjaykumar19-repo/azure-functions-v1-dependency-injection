@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
 
-namespace AzureFunctionsV1.DependencyInjection.NETFramework.Examples
+namespace AzureFunctionsV1.DependencyInjection.Examples
 {
     public class Startup : FunctionAppStartup
     {
