@@ -12,11 +12,8 @@ namespace AzureFunctionsV1.DependencyInjection.NETFramework.Examples
 {
     public static class GetFunctionExample2
     {
-        public static IServiceProvider serviceProvider;
-        static GetFunctionExample2()
-        {
-            serviceProvider = new CoreFunctionsStartupServices(new Startup()).Create();
-        }
+        public static IServiceProvider serviceProvider
+           = new CoreFunctionsStartupServices(new Startup()).Create();
 
         [FunctionName(nameof(GetFunctionExample2))]
         public static async Task<HttpResponseMessage> Run
