@@ -30,6 +30,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>FA.DI.Framework.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Extensions.Configuration, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Configuration.1.1.1\lib\netstandard1.1\Microsoft.Extensions.Configuration.dll</HintPath>
@@ -120,7 +126,7 @@
   <ItemGroup>
     <Compile Include="DependencyInjection\CoreFunctionsStartupServices.cs" />
     <Compile Include="DependencyInjection\FunctionAppContainerBuilder.cs" />
-    <Compile Include="DependencyInjection\FunctionAppStartup.cs" />
+    <Compile Include="FunctionAppStartup.cs" />
     <Compile Include="DependencyInjection\Interfaces\IFunctionAppContainerBuilder.cs" />
     <Compile Include="DependencyInjection\Interfaces\IFunctionAppStartup.cs" />
     <Compile Include="DependencyInjection\Interfaces\IFunctionsStartupServices.cs" />
@@ -128,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FA.DI.Framework.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

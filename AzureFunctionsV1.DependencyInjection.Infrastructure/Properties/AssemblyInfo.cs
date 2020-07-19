@@ -1,15 +1,16 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AzureFunctionsV1.DependencyInjection.Infrastructurestructure")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("AzureFunctionsV1.DependencyInjection.Infrastructure")]
+[assembly: AssemblyDescription("Package provides you an easy way to implement Dependency Injection in your .NET Framework Azure Function Projects ( Azure Function v1), By default Microsoft doesn’t support Dependency Injection for Azure Function v1.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AzureFunctionsV1.DependencyInjection.Infrastructurestructure")]
+[assembly: AssemblyProduct("AzureFunctionsV1.DependencyInjection.Infrastructure")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +33,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.1")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguage("en")]

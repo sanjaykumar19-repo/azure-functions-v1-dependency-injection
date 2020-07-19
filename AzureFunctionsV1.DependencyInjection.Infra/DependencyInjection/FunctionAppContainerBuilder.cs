@@ -3,14 +3,14 @@ using System;
 
 namespace AzureFunctionsV1.DependencyInjection.Infrastructure
 {
-    public class FunctionAppContainerBuilder : IFunctionAppContainerBuilder
+    internal class FunctionAppContainerBuilder
     {
         private readonly IServiceCollection _services;
 
-        public FunctionAppContainerBuilder() =>
+        protected internal FunctionAppContainerBuilder() =>
          _services = new ServiceCollection();
 
-        public IFunctionAppContainerBuilder Register(IFunctionAppStartup startup = null)
+        protected internal FunctionAppContainerBuilder Register(IFunctionAppStartup startup = null)
         {
             if (startup is null)
                 return this;
@@ -20,7 +20,7 @@ namespace AzureFunctionsV1.DependencyInjection.Infrastructure
             return this;
         }
 
-        public IServiceProvider Build() =>
+        protected internal IServiceProvider Build() =>
             _services.BuildServiceProvider();
     }
 }
